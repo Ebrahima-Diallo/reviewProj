@@ -69,3 +69,6 @@ Juliana  | 100 | 100 |
 Alyssa  | 100 | 100 |
 Jake  | 100 | 100 |
 Ebrahima  | 100 | 100 |
+
+## Contributions
+Juliana 
