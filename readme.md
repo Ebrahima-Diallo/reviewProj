@@ -37,8 +37,151 @@ int main(){
         C
 
 }
-  ```
+  
+```
+
+## Code Completed
+ ```
  
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+#include <cmath>
+#include <sstream>
+#include <numeric>
+//#include "run.h"
+
+//calcuates lab grade average
+double labAvg(std::vector<double> * labs, int labNum) {
+    double sum;
+    double avg;
+
+    sum = std::accumulate(labs->begin(), labs->end(),0);
+    avg = sum/labNum;
+
+    return avg;
+}
+
+//calcuates homework grade average
+double hwAvg(std::vector<double> * hws, int hwNum) {
+    double sum;
+    double avg;
+
+    //adds together everything in the vector
+    sum = std::accumulate(hws->begin(), hws->end(),0);
+    avg = sum/hwNum;
+
+    return avg;
+}
+
+//calculates the final grade using the grade of each category
+double finalGrade(double labGrade, double hwGrade, double termProj, double final, double reviewProj){
+
+    //lab grade out of 50 pts
+    labGrade = (labGrade/100) * 50;
+    //hw grade out of 500 pts
+    hwGrade = (hwGrade/100) * 500;
+    //term project out of 350 pts
+    termProj = (termProj/100) * 350;
+    //review proj out of 30 pts
+    reviewProj = (reviewProj/100) * 30;
+
+    //final grade calculated out of 1000 pts
+    double total = (labGrade + hwGrade + termProj + final + reviewProj);
+    total = total/ 10; //instead of /1000 then *100
+
+    return total;
+}
+
+
+class run{
+   public:
+    int labNum;
+    int hwNum;
+};
+
+int main() {
+    
+    run myObj;
+    
+    myObj.labNum = 12;
+    myObj.hwNum = 5;
+    
+   // int myObj.labNum = 12, myObj.hwNum = 5;
+    double grade;
+    std::vector<double> labs;
+    std::vector<double> hws;
+
+    //adds grades to lab vector
+    std::cout << "Enter lab grades" << '\n';
+    for (int i = 0; i < myObj.labNum; i++) {
+        std::cin >> grade;
+        labs.push_back(grade);
+    }
+    //adds hw grades to hw vector
+    std::cout << "Enter hw grades" << '\n';
+    for (int i = 0; i < myObj.hwNum; i++) {
+        std::cin >> grade;
+        hws.push_back(grade);
+    }
+
+    //finds average grade of labs and hw
+    double labGrade = labAvg(&labs, myObj.labNum);
+    double hwGrade = hwAvg(&hws, myObj.hwNum);
+
+    double termProj, final, reviewProj;
+    std::cout << "Enter term project grade" << '\n';
+    std::cin >> termProj;
+    std::cout << "Enter final exam grade" << '\n';
+    std::cin >> final;
+    std::cout << "Review project grade"<< '\n';
+    std::cin >> reviewProj;
+
+    double termGrade = finalGrade(labGrade, hwGrade, termProj, final, reviewProj);
+
+    std::cout << termGrade << '\n';
+
+    if (termGrade >= 94){
+        std::cout << "A" << std::endl;
+    }
+    else if (termGrade >= 90){
+        std::cout << "A-" << std::endl;
+    }
+    else if (termGrade >= 87){
+        std::cout << "B+" << std::endl;
+    }
+    else if (termGrade >= 83){
+        std::cout << "B" << std::endl;
+    }
+    else if (termGrade >= 80){
+        std::cout << "B-" << std::endl;
+    }
+    else if (termGrade >= 77){
+        std::cout << "C+" << std::endl;
+    }
+    else if (termGrade >= 73){
+         std::cout << "C" << std::endl;
+    }
+    else if (termGrade >= 70){
+         std::cout << "C-" << std::endl;
+    }
+    else if (termGrade >= 67){
+         std::cout << "D+" << std::endl;
+    }
+    else if (termGrade >= 60){
+        std::cout << "D" << std::endl;
+    }
+    else{
+        std::cout << "F" << std::endl;
+}
+   //run test;
+   //test.hello();
+
+   return 0;
+}
+ 
+ ```
   ## Summary <br />
 &nbsp; &nbsp; For this assignment we were tasked with creating a code that will be able to produce a class average with the right information provided.
 
