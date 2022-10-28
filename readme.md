@@ -8,22 +8,22 @@
   ```
   double labAvg(){
     int *array();
-    add lab grades from vector and divide by length
+    //add lab grades from vector and divide by length
 }
 
 double hwAvg(){
 
-    add hw grades and divide by length
+    //add hw grades and divide by length
 }
 
 double finalGrade(labAvg, hwAvg, termProj, final, reviewProj){
-    take percentages and conver to points to find final grade
+    //take percentages and conver to points to find final grade
 }
 
 int main(){
-    int number of labs done, number of assignments done;
-    double labs vector -> list all lab grades;
-    double assignment vector -> list all assign grades;
+    //int number of labs done, number of assignments done;
+    //double labs vector -> list all lab grades;
+    //double assignment vector -> list all assign grades;
 
     double labAvg;
 
@@ -39,15 +39,15 @@ int main(){
 }
   ```
  
-  ### Summary <br />
+  ## Summary <br />
 &nbsp; &nbsp; For this assignment we were tasked with creating a code that will be able to produce a class average with the right information provided.
 
-  #### Features
+  ## Features
 &nbsp; &nbsp; The information thats taken in include all of the grades that you have recieved by the end of the semester, and it outputs the total average with the associated letter grade. We beleive the letter grade is a helpful touch to include considering it helps you visualize the grade. <br />
 
 &nbsp; &nbsp; The data is added in by prompts given by the compiler as to which grade you need to enter.
 
-##### Mock Data
+## Mock Data
 
 Student Name  | Assignment 1 Grade | Assignment 2 Grade | Assignment 3 Grade |Assignment 4 Grade |Assignment 5 Grade | 
 ------------- | ------------- | -------------| -------------| -------------| -------------|
@@ -62,3 +62,10 @@ Juliana  | 100 | 100 | 0 | 100 | 100 | 100 | 0 | 100 | 0 | 100 | 100 | 100 |
 Alyssa  | 100 | 100 | 0 | 100 | 100 | 100 | 0 | 100 | 0 | 100 | 100 | 100 |
 Jake  | 100 | 100 | 0 | 100 | 100 | 100 | 0 | 100 | 0 | 100 | 100 | 100 |
 Ebrahima  | 100 | 100 | 0 | 100 | 100 | 100 | 0 | 100 | 0 | 100 | 100 | 100 |
+
+Student Name  | Review Project Grade | Final Project Grade |
+------------- | ------------- | -------------|
+Juliana  | 100 | 100 |
+Alyssa  | 100 | 100 |
+Jake  | 100 | 100 |
+Ebrahima  | 100 | 100 |
